@@ -2,8 +2,10 @@ package main;
 
 import java.util.List;
 
-//TODO: Add constructor with address and accessCards
 //TODO: Read about final methods
+/*
+Final method can't be overridden, i.e. changed in child Class, i.e. in Class that extends parent Class
+*/
 public class SystemUser {
 
     private String uniqueId;
@@ -21,6 +23,12 @@ public class SystemUser {
         System.out.println("Creating new user " + name);
         this.name = name;
         this.uniqueId = String.valueOf(System.currentTimeMillis());
+    }
+
+    //TODO: Add constructor with address and accessCards
+    public SystemUser(UserAddress address, List<UserAccessCard> accessCards) {
+        this.address = address;
+        this.accessCards = accessCards;
     }
 
     public String getName() {
